@@ -1,0 +1,115 @@
+*{ box-sizing: border-box; }
+
+body {
+	color: #13294b;
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	margin: 0;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.breathe {
+	position: relative;
+}
+
+.breathe-row {
+	display: flex;
+}
+
+.breathe-box {
+	background-color: #73b4dc;
+	background-image: url('../img/lungs.svg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 150px 112px;
+	border: 1px solid #13294b;
+	height: 190px;
+	position: relative;
+	width: 190px;
+}
+
+@media (min-width: 992px) {
+	.breathe-box {
+		background-size: 200px 149px;
+		height: 250px;
+		width: 250px;		
+	}
+}
+
+.breathe-label {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.label-full {
+	width: 100%;
+}
+
+.breathe-circle {
+  position: relative;
+  border-radius: 50%;
+  background-color: #13294b;
+  height: 22px;
+  width: 22px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  animation-duration: 12s;
+  animation-name: movesquare;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movesquare {
+  0% {
+    margin: -6% 0 0 -6%;
+  }
+  25% {
+    margin: -6% 0 0 94%;
+  }
+  50% {
+    margin: 94% 0 0 94%;
+  }
+  75% {
+    margin: 94% 0 0 -6%;
+  }
+  87.5%{
+  }
+  100% {
+    margin: -6% 0 0 -6%;
+    transform:rotateZ(1800deg);
+  }
+}
+
+@media (min-width: 992px) {
+	@keyframes movesquare {
+	  0% {
+	    margin: -4.5% 0 0 -4.5%;
+	  }
+	  25% {
+	    margin: -4.5% 0 0 95.5%;
+	  }
+	  50% {
+	    margin: 95.5% 0 0 95.5%;
+	  }
+	  75% {
+	    margin: 95.5% 0 0 -4.5%;
+	  }
+	  87.5%{
+	  }
+	  100% {
+	    margin: -4.5% 0 0 -4.5%;
+	    transform:rotateZ(1800deg);
+	  }
+	}
+}
